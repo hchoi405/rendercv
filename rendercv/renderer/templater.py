@@ -78,6 +78,8 @@ class TemplatedFile:
             today=data.format_date(Date.today(), date_style="FULL_MONTH_NAME YEAR"),
             **kwargs,
         )
+        if self.design.debug_show_entry_names and "Preamble" not in template_name:
+            result = f"[DEBUG] template name: {template_name}\n" + result
 
         return result
 

@@ -305,3 +305,11 @@ class ThemeOptions(RenderCVBaseModelWithoutExtraKeys):
         title="Margins",
         description="Page, section title, entry field, and highlights field margins.",
     )
+    debug_show_entry_names: bool = pydantic.Field(
+        default=False,
+        title="Debug: Show Entry Names",
+        description=(
+            "If this option is set to true, then the names of the entries will be shown"
+            " in the entry area. The default value is false."
+        ),
+    )
